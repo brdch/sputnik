@@ -63,6 +63,6 @@ public final class Main {
 
     private static void printWelcomeMessage() {
         System.out.println("Sputnik version " + Main.class.getPackage().getImplementationVersion());
-        System.out.println("Test Print");
+        System.out.println("Test Print #2");
     }
 }
