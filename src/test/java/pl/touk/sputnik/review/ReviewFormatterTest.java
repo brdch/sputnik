@@ -29,6 +29,7 @@ class ReviewFormatterTest {
         String result = formatter.stringify(null);
 
         assertThat(result).isEmpty();
+        assertThat(false).isTrue();
     }
 
     @Test
