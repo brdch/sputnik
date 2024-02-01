@@ -34,7 +34,7 @@ class ReviewFormatterTest {
     @Test
     void shouldStringifyObjectToStringRepresentation() {
         Configuration configMock = mock(Configuration.class);
-        when(configMock.getProperty(GeneralOption.MESSAGE_COMMENT_FORMAT)).thenReturn("{0}{1}{2}");
+        when(configMock.getProperty(GeneralOption.MESSAGE_COMMENT_FORMAT)).thenReturn("{0}{1}");
         when(configMock.getProperty(GeneralOption.MESSAGE_PROBLEM_FORMAT)).thenReturn("{0}{1}");
 
         ReviewFormatter formatter = new ReviewFormatter(configMock);
