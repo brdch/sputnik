@@ -17,8 +17,12 @@ jobs:
         with:
           distribution: 'zulu'
           java-version: 8
+
+      - name: Grant Permissions to gradlew
+        run: chmod +x gradlew
+
       - name: Build project
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: ./gradlew :test --tests "pl.touk.sputnik.review.ReviewFormatterTest"
+        run: gradle test --tests "pl.touk.sputnik.review.ReviewFormatterTest"
 
