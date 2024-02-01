@@ -21,5 +21,5 @@ jobs:
       - name: Build project
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: ./gradlew test --tests "pl.touk.sputnik.review.ReviewFormatterTest" jacocoTestReport
+        run: ./gradlew build jacocoTestReport
 
