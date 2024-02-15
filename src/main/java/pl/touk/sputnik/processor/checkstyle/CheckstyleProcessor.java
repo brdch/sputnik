@@ -71,7 +71,8 @@ public class CheckstyleProcessor implements ReviewProcessor {
             ClassLoader moduleClassLoader = Checker.class.getClassLoader();
 
             Properties properties = new Properties(System.getProperties());
-            properties.setProperty("config_loc", new File(configurationFile).getParent());
+            System.out.println(new File(configurationFile).getAbsolutePath());
+            properties.setProperty("config_loc", new File(configurationFile).getAbsolutePath());
 
             checker.setModuleClassLoader(moduleClassLoader);
             checker.configure(ConfigurationLoader.loadConfiguration(configurationFile, new PropertiesExpander(properties)));
